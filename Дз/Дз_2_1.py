@@ -1,4 +1,3 @@
-#Завдання 1 
 class BankAccount():
     def __init__(self, account_number, balance):
         self.account_number = account_number
@@ -31,17 +30,3 @@ print(Bob123.balance,"$=") # знак дорівнює біля долара п�
 
 Bob123.withdraw(10)
 print(Bob123.balance,"$-") # мінус біля долара позначає що з балансу зняли гроші
-
-#Завдання 2
-class Car():
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
-
-    def get_info(self):
-        print(f"Year:{self.year} Make:{self.make} Model:{self.model}")
-
-Grandpas_Car = Car("Mercedes", "CDI","2012")
-
-Grandpas_Car.get_info()
