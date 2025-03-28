@@ -7,4 +7,6 @@ class Employee():
     def get_salary_info(self):
         print(f"Заробітна плата {self.name} на посаді {self.position}: {self.salary}")
 
-Bob = Employee()
+Bob = Employee("Боб", "Менеджер", "3$")
+
+Bob.get_salary_info()
