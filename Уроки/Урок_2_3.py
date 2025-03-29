@@ -1,20 +1,17 @@
-class Student:
+class Student():
 
-    def __init__(self, name=None, height=160):
-        self.name = name
-        self.height = height
+    height = 160
 
-    def __bool__(self):
-        return self.name != None # != is not
+    def __init__(self):
+        self.height = 170
     
-    def __len__(self):
-        return self.height
-    
-    def __del__ (self):
-        print("Студент все...")
+    def printer(self):
+        print(self.height)
+
+    def change_height(self, new_height):
+        self.height = new_height
 
 nick = Student()
-print(nick.__bool__())
-print(nick.__len__())
-print(len(nick))
-print(bool(nick))
+nick.printer()
+nick.change_height(180)
+nick.printer()
