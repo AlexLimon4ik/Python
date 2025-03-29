@@ -144,6 +144,29 @@ class Human:
             self.shopping(manage="delicacies")
 
 #<======
+class Auto:
+    def __init__(self, brand_list):
+        self.brand = random.choice(list(brand_list))
+        self.fuel = brand_list[self.brand]["fuel"]
+        self.strength = brand_list[self.brand]["strength"]
+        self.consumption = brand_list[self.brand]["consumption"]
+
+    def drive(self):
+        if self.strength > 0 and self.fuel >= self.consumption:
+            self.fuel -= self.consumption
+            self.strength -= 1
+            return True
+        else:
+            print("The car cannot move")
+            return False
+        
+class House:
+    def __init__(self):
+        self.mess = 0
+        self.food = 0
+
+
+
 
 #<======
 
@@ -167,3 +190,14 @@ brands_of_car = {
 "Ferrari":{"fuel":80, "strength":120,
 "consumption": 14},
 }
+
+class Job:
+    def __init__(self, job_list):
+        self.job = random.choice(list(job_list))
+        self.salary = job_list[self.job]["salary"]
+        self.gladness_less = job_list[self.job]["gladness_less"]
+
+nick = Human(name="Nick")
+for day in range(1,19):
+    if nick.live(day) == False:
+        break
