@@ -1,9 +1,14 @@
-a = int(input("Value:"))
-b = 0
-message = input("Message:")
+from pyperclip import copy
 
-for i in range(0, a):
-    b += 1
-    print(f"{b}. {message}")
-    
+def cope(message):
+    c = []
+    b = 0
+    for string in range(0, 10000):
+        b += 1
+        c.append(f"{b}. {message}")  
+    return c
 
+inp = input("Message: ")
+a = cope(inp)
+
+copy(a)
