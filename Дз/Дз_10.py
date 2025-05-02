@@ -21,4 +21,4 @@ connection.commit()
 res = cur.fetchall() # а це щоб останю задачу вивело
 print(res)
 
-connection.close()
+connection.close() 
